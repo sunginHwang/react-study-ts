@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "./typescript-react-tutorial",
+    "baseUrl": ".",
     "outDir": "build/dist",
     "module": "esnext",
     "target": "es5",
@@ -19,7 +19,7 @@
     "noUnusedLocals": true
   },
   "exclude": [
-    "typescript-react-tutorial/node_modules",
+    "node_modules",
     "build",
     "scripts",
     "acceptance-tests",
