@@ -5,7 +5,7 @@ interface Props {
 }
 
 class MainHeader extends React.Component<Props>  {
-    public render() {
+     render() {
         const { HeaderName } = this.props;
         return (
             <div>

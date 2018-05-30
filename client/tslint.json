@@ -18,6 +18,8 @@
     "forin": true,
     "indent": [ true, "spaces" ],
     "interface-name": [true, "never-prefix"],
+    "import-destructuring-spacing": true,
+    "import-spacing": true,
     "jsdoc-format": true,
     "jsx-no-lambda": false,
     "jsx-no-multiline-js": false,
