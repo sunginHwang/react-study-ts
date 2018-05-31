@@ -1,6 +1,7 @@
 import * as React from 'react';
 import './App.css';
 import MainHeader from './component/MainHeader';
+import MainHeaderFnc from './component/MainHeaderFnc';
 import logo from './logo.svg';
 
 interface Props {
@@ -40,6 +41,7 @@ class App extends React.Component<Props, State> {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <MainHeader HeaderName={this.state.HeaderName}/>
+        <MainHeaderFnc HeaderName={this.state.HeaderName}/>
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
