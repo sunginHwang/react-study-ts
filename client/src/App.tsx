@@ -32,6 +32,10 @@ class App extends React.Component<Props, State> {
         );
     }
 
+    onDoubleIncreaseCount = (count: number): number => {
+        return count * 2;
+    }
+
    render() {
     const { onChangeHeaderName } = this;
     return (
@@ -40,7 +44,7 @@ class App extends React.Component<Props, State> {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <MainHeader HeaderName={this.state.HeaderName}/>
+        <MainHeader HeaderName={this.state.HeaderName} OnDoubleIncrease={this.onDoubleIncreaseCount}/>
         <MainHeaderFnc HeaderName={this.state.HeaderName}/>
         <p className="App-intro">
           To get started, edit <code>src/App.tsx</code> and save to reload.
