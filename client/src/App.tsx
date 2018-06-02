@@ -2,6 +2,7 @@ import * as React from 'react';
 import './App.css';
 import MainHeader from './component/MainHeader';
 import MainHeaderFnc from './component/MainHeaderFnc';
+import MainHeaderContainer from 'containers/MainHeaderContainer';
 import logo from './logo.svg';
 
 interface Props {
@@ -50,6 +51,12 @@ class App extends React.Component<Props, State> {
           To get started, edit <code>src/App.tsx</code> and save to reload.
         </p>
         <button onClick={onChangeHeaderName}>HeaderChaneButton</button>
+        <div>
+            <h1>start redux study</h1>
+        </div>
+        <div>
+            <MainHeaderContainer />
+        </div>
       </div>
     );
   }
