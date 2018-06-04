@@ -4,9 +4,10 @@ interface Props {
     count: number;
     countIncrease(): void;
     countDecrease(): void;
+    countSetting(): void;
 }
 
-const HeaderComponent = ({count, countIncrease, countDecrease}: Props) => (
+const HeaderComponent = ({count, countIncrease, countDecrease, countSetting}: Props) => (
     <div>
         <h1>Header Component For Redux</h1>
         <div>
@@ -14,6 +15,8 @@ const HeaderComponent = ({count, countIncrease, countDecrease}: Props) => (
         </div>
         <button onClick={countIncrease}>redux count increase</button>
         <button onClick={countDecrease}>redux count decrease</button>
+        <button onClick={countSetting}>redux count setting for 100</button>
+
     </div>
 );
 

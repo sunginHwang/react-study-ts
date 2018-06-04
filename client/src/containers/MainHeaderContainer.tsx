@@ -19,13 +19,18 @@ class MainHeaderContainer extends React.Component<Props> {
         const { HeaderActions } = this.props;
         HeaderActions.decrement();
     }
+    onSettingCount = () => {
+        const { HeaderActions } = this.props;
+        HeaderActions.setting(100);
+    }
     render() {
-        const { onIncrement, onDecrement } = this;
+        const { onIncrement, onDecrement, onSettingCount } = this;
         const { count } = this.props;
         return (
             <HeaderComponent
                 countIncrease={onIncrement}
                 countDecrease={onDecrement}
+                countSetting={onSettingCount}
                 count={count}
             />
         );
@@ -34,7 +39,7 @@ class MainHeaderContainer extends React.Component<Props> {
 
 export default connect(
     ({ Header }: StoreState) => ({
-        count: Header.count
+        count: Header.counts
     }),
     (dispatch) => ({
         HeaderActions: bindActionCreators(headerActions, dispatch)
