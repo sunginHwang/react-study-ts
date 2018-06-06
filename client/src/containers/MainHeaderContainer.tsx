@@ -22,6 +22,11 @@ class MainHeaderContainer extends React.Component<Props> {
     onSettingCount = () => {
         const { HeaderActions } = this.props;
         HeaderActions.setting(100);
+        this.onSettingDepthDesciption();
+    }
+    onSettingDepthDesciption = () => {
+        const { HeaderActions } = this.props;
+        HeaderActions.depthParamSetting('testCase');
     }
     render() {
         const { onIncrement, onDecrement, onSettingCount } = this;
