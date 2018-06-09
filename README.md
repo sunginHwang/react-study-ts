@@ -5,10 +5,10 @@
 ## 프로젝트 스터디를 통해 공부할 사항
 
 - TypeScript 에 대한 이해도 
-- TSX 를 사용해 react 에서 TypeScript 사용
-- TypeScript 를 redux에 적용해 보기
+- TSX 를 사용해 react 에서 TypeScript 사용 - 스터디 완료
+- TypeScript 를 redux에 적용해 보기 - 스터디 완료
 - TypeScript 를 통한 HOC 적용해 보기
-- TypeScript 를 통한 무상태 처라
+- TypeScript 를 통한 무상태 처리 - 스터디 중
 - TypeScript 와 redux에 미들웨어 적용해 보기
 - TypeScript 를 next.js 에서도 제대로 적용해 보기
 - TypeScript 를 redux 미들웨어에 비동기 통신으로 호출해 보기
