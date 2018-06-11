@@ -37,21 +37,19 @@ interface HeaderDepthJsonRecordParam {
 }
 
 export class ReduxThunkResponseParams {
-    type: string;
-    payload: string;
     status: number;
     statusText: string;
     request: any;
     headers: any;
-    data: any;
+    config: any;
+    data: AsyncResponseParam;
 }
 
 export class AsyncResponseParam {
-    status: number;
-    statusText: string;
-    request: any;
-    headers: any;
-    data: any;
+    body: string;
+    id: number;
+    title: string;
+    userId: number;
 }
 
 const HeaderStateParamRecord = Record({
@@ -87,7 +85,7 @@ export default handleActions<HeaderState, any>(
             return <HeaderState> state.set('counts', 300);
         },
         [ASYNC_CALL_SUCCESS]: (state, action: Action<ReduxThunkResponseParams>): HeaderState => {
-            return <HeaderState> state.set('counts', action.payload!.status);
+            return <HeaderState> state.set('counts', action.payload!.data.id);
         },
         [ASYNC_CALL_FAILURE]: (state, action: Action<number>): HeaderState => {
             return <HeaderState> state.set('counts', 404);
