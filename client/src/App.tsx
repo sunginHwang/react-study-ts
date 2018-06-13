@@ -47,7 +47,6 @@ class App extends React.Component<Props, State> {
             <MainHeaderFnc HeaderName={this.state.HeaderName}/>
             <button onClick={onChangeHeaderName}>HeaderChaneButton</button>
         </div>
-        <h1>start redux study</h1>
         <div className="App-Content">
             <h1>start redux study</h1>
             <MainHeaderContainer />

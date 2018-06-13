@@ -24,10 +24,6 @@ class MainHeaderContainer extends React.Component<Props> {
         HeaderActions.setting(100);
         this.onSettingDepthDesciption();
     }
-    asyncCall = () => {
-        const { HeaderActions } = this.props;
-        HeaderActions.async_call();
-    }
     onSettingDepthDesciption = () => {
         const { HeaderActions } = this.props;
         HeaderActions.depthParamSetting('testCase');
@@ -37,9 +33,6 @@ class MainHeaderContainer extends React.Component<Props> {
         const { count } = this.props;
         return (
             <div>
-                <div>
-                    <p onClick={this.asyncCall}>tag-button</p>
-                </div>
                 <HeaderComponent
                     countIncrease={onIncrement}
                     countDecrease={onDecrement}

@@ -10,20 +10,20 @@ const getPostAPI = () => {
     return axios.get(`https://jsonplaceholder.typicode.com/posts/1`);
 };
 
-export type asyncdPayload = { body: string, title: string, id: number, userId: number };
-
 export const actionCreators = {
     asyncCall: createAction(ASYNC_CALL, getPostAPI)
 };
 
-export class ReduxThunkResponseParams {
+export type asyncdPayload = { body: string, title: string, id: number, userId: number };
+
+export type ReduxThunkResponseParams = {
     status: number;
     statusText: string;
     request: any;
     headers: any;
     config: any;
     data: asyncdPayload;
-}
+};
 
 export type ContentState = {
     asyncData: asyncdPayload,
@@ -42,17 +42,16 @@ const initialState: ContentState = {
 
 export default handleActions<ContentState, any>(
     {
-        [ASYNC_CALL]: (state: ContentState, action: Action<number>): ContentState => {
-            return {loading: true, ...state};
-        },
         [ASYNC_CALL_PENDING]: (state: ContentState, action: Action<number>): ContentState => {
-            return {loading: true, ...state};
+            return {...state, loading: true};
         },
         [ASYNC_CALL_SUCCESS]: (state, action: Action<ReduxThunkResponseParams>): ContentState => {
-            return {loading: false, asyncData: action.payload!.data, ...state};
+            return {...state,
+                        asyncData: action.payload!.data,
+                        loading: false};
         },
         [ASYNC_CALL_FAILURE]: (state, action: Action<number>): ContentState => {
-            return {loading: false, ...state};
+            return {...state, loading: false};
         },
     },
     initialState
