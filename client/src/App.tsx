@@ -3,7 +3,7 @@ import './App.css';
 import MainHeader from './component/MainHeader';
 import MainHeaderFnc from './component/MainHeaderFnc';
 import MainHeaderContainer from 'containers/MainHeaderContainer';
-import logo from './logo.svg';
+import MainContentContainer from 'containers/MainContentContainer';
 
 interface Props {
 }
@@ -41,21 +41,20 @@ class App extends React.Component<Props, State> {
     const { onChangeHeaderName } = this;
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <MainHeader HeaderName={this.state.HeaderName} OnDoubleIncrease={this.onDoubleIncreaseCount}/>
-        <MainHeaderFnc HeaderName={this.state.HeaderName}/>
-        <p className="App-intro">
-          To get started, edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <button onClick={onChangeHeaderName}>HeaderChaneButton</button>
-        <div>
-            <h1>start redux study</h1>
+        <div className="App-Content">
+            <h1>start state and props study</h1>
+            <MainHeader HeaderName={this.state.HeaderName} OnDoubleIncrease={this.onDoubleIncreaseCount}/>
+            <MainHeaderFnc HeaderName={this.state.HeaderName}/>
+            <button onClick={onChangeHeaderName}>HeaderChaneButton</button>
         </div>
-        <div>
+        <h1>start redux study</h1>
+        <div className="App-Content">
+            <h1>start redux study</h1>
             <MainHeaderContainer />
+        </div>
+        <div className="App-Content">
+          <h1>start redux async study</h1>
+          <MainContentContainer />
         </div>
       </div>
     );
